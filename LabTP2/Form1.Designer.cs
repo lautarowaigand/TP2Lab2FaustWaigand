@@ -226,6 +226,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Fprincipal
             // 
@@ -241,6 +242,7 @@
             this.Controls.Add(this.cBestrellas);
             this.Controls.Add(this.cBalojamiento);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Fprincipal";

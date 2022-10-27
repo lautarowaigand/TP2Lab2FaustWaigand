@@ -54,34 +54,6 @@ namespace LabTP2
             {
                 dataGridView1.Rows.Add(a.Direccion, a.PrecioPorDia());
             }
-            
-            
-            
-            //dataGridView1.ColumnHeadersVisible = true;
-            //dataGridView1.RowHeadersVisible = true;
-            //int alto = dataGridView1.ClientSize.Height;
-            //foreach (DataGridViewRow row in dataGridView1.Rows)
-            //{
-            //    row.Height = alto / dataGridView1.RowCount;
-            //    row.Resizable = DataGridViewTriState.False;
-            //}
-            //for (int c = 0; c < dataGridView1.Columns.Count; c++)
-            //{
-            //    DataGridViewImageColumn dgvc = new DataGridViewImageColumn();
-            //    dgvc.ImageLayout = DataGridViewImageCellLayout.Stretch;
-            //    dgvc.FillWeight = 10;
-            //    dataGridView1.Columns.Add(dgvc);
-            //}
-            //int renglones = dataGridView1.RowCount = 8;
-            //for (int r = 0; r < renglones; r++)
-            //{
-            //    for (int c = 0; c < dataGridView1.ColumnCount; c++)
-            //    {
-            //        dataGridView1[c, r].Value = Properties.Resources.ciudad;
-            //    }
-            //}
-            
-
 
         }
 
@@ -111,6 +83,19 @@ namespace LabTP2
         {
             fAlojamiento fa = new fAlojamiento("baja");
             fa.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int n = dataGridView1.Rows.Add();
+            int columnas = 1;
+            for (int c = 0; c < columnas; c++)
+            {
+                DataGridViewImageColumn dgvc = new DataGridViewImageColumn();
+                dgvc.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                dataGridView1.Columns.Add(dgvc);
+            }
+            dataGridView1.Rows[n].Cells[0].Value = Properties.Resources.ciudad;
         }
     }
 }
